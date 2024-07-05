@@ -6,7 +6,8 @@ const mongoStore = require("connect-mongo")(session);
 const passport = require("passport");
 
 const app = express();
-const PORT = 3000;
+require('dotenv').config();
+const PORT = process.env.PORT;
 
 connectDb();
 require("./models/User");
