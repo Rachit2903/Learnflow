@@ -383,11 +383,11 @@
                 description: editor1.getHTMLCode(),
             };
 
-            if (videoUploadResponse.ok) {
+            if (videoUploadResponse && videoUploadResponse.ok) {
                 newPost.video = `https://d2bk7thkwxehz5.cloudfront.net/${videoKeyName}`;
             }
 
-            if (thumbnailUploadResponse.ok) {
+            if (thumbnailUploadResponse && thumbnailUploadResponse.ok) {
                 newPost.thumbnail = `https://d2bk7thkwxehz5.cloudfront.net/${thumbnailKeyName}`;
             }
 
